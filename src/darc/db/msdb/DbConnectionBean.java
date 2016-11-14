@@ -32,7 +32,7 @@ public class DbConnectionBean {
 		this.set("host", host);
 		this.set("database", database);
 		this.set("user", user);
-		this.set("pwd", pwd);
+		this.set("password", pwd);
 	}
 	public DbConnectionBean(String host, String database, String user) {
 		this(host, database, user, null);

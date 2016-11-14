@@ -39,7 +39,8 @@ public class DbConnection {
 		this.disconnect();
 
 		try {
-			this.connection = DriverManager.getConnection(this.connectionBean.getConnectionString());
+			String connectionString = this.connectionBean.getConnectionString();
+			this.connection = DriverManager.getConnection(connectionString);
 			this.statement = this.connection.createStatement();
 		} catch (SQLException e) {
 			this.disconnect();
