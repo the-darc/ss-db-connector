@@ -66,14 +66,14 @@ Utils.debug('Count removed: ' + countRemoved);
 
 Create a new DataBaseConnection based on the passed connection properties.
 
-**Parameters: **
+**Parameters:**
 
 - **host:** Host name of the connection (ex.: "yourserver.database.windows.net")
 - **database:** database name (ex.: "AdventureWorks")
 - **user:** user (ex.: "yourusername@yourserver")
 - **pwd:** password (ex.: "yourpassword")
 
-**Return: **
+**Return:**
 
 A new instance of the DbConnection with the specific data base connection configuration
 
@@ -81,11 +81,11 @@ A new instance of the DbConnection with the specific data base connection config
 
 Try to establish a connection with the database
 
-**Return: **
+**Return:**
 
 The same current instance of DbConnection, but now connected to the database.
 
-**Throws: **
+**Throws:**
 
 - **SQLException:** If it fails to check for existent connections
 - **DbException:** If it fails to create a new connection
@@ -94,15 +94,15 @@ The same current instance of DbConnection, but now connected to the database.
 
 Executes the given SQL statement, which returns a single [ResultSet](https://docs.oracle.com/javase/6/docs/api/java/sql/ResultSet.html) object
 
-**Parameters: **
+**Parameters:**
 
 - **selectSql:** An SQL Select statement to be sent to the database
 
-**Return: **
+**Return:**
 
 A Java [ResultSet](https://docs.oracle.com/javase/6/docs/api/java/sql/ResultSet.html) object that contains the data produced by the given query (never null)
 
-**Throws: **
+**Throws:**
 
 - **SQLException:** if a database access error occurs
 - **DbException:** if it is not connected to the database
@@ -111,15 +111,15 @@ A Java [ResultSet](https://docs.oracle.com/javase/6/docs/api/java/sql/ResultSet.
 
 Executes the given SQL statement, which may be an INSERT, UPDATE, or DELETE statement or an SQL statement that returns nothing, such as an SQL DDL statement.
 
-**Parameters: **
+**Parameters:**
 
 - **sqlStatement:** An SQL Data Manipulation Language (DML) statement, such as INSERT, UPDATE or DELETE; or an SQL statement that returns nothing, such as a DDL statement.
 
-**Return: **
+**Return:**
 
 The row count for SQL Data Manipulation Language (DML) statements; or 0 for SQL statements that return nothing.
 
-**Throws: **
+**Throws:**
 
 - **SQLException:** if a database access error occurs
 - **DbException:** if it is not connected to the database
@@ -128,11 +128,11 @@ The row count for SQL Data Manipulation Language (DML) statements; or 0 for SQL 
 
 Check if it is connected to the database.
 
-**Return: **
+**Return:**
 
 `True` if it is connected and `False` if it is not.
 
-**Throws: **
+**Throws:**
 
 - **SQLException:** If it fails to check for existent connections
 
@@ -140,7 +140,7 @@ Check if it is connected to the database.
 
 Close the current connection with the database. Do nothing if there isn't a connection opened.
 
-**Return: **
+**Return:**
 
 The same current instance of DbConnection.
 
@@ -148,7 +148,7 @@ The same current instance of DbConnection.
 
 Cancels the current execution if both the DBMS and driver support aborting an SQL statement.
 
-**Throws: **
+**Throws:**
 
 - **SQLException:** If it fails to check for existent connections
 
