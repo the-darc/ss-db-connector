@@ -43,7 +43,10 @@ public class DbConnectionBean {
 	public DbConnectionBean(String host) {
 		this(host, null, null, null);
 	}
-
+	public DbConnectionBean() {
+		this(null, null, null, null);
+	}
+	
 	/**
 	 * Set an genneric connection configuration
 	 * @param key The configuration name (Ex.: "port")
