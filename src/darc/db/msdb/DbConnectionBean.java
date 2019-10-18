@@ -91,7 +91,7 @@ public class DbConnectionBean {
 		
 		String host = this.config.get("host");
 		String port = this.config.get("port");
-		port = port == null ? "1433" : port; 
+		port = port == null ? "50003" : port; 
 		
 		String connectionString = String.format("jdbc:sqlserver://%s:%s;", host, port);
 		
